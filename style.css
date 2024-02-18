@@ -120,3 +120,11 @@ article .jobb {
  footer {
     grid-area: f;
  }
+
+ .kep {
+    text-align: center;
+ }
+
+ fieldset {
+    padding: 10px;
+ }
