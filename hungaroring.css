@@ -1,6 +1,7 @@
 *{
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body{
     width: 80%;
@@ -39,10 +40,11 @@ ul {
     float: right;
     grid-area: j;
     height: 200px;
+    text-align: right;
   }
   main{
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: 
     " h h h "
     " n a j"
@@ -51,18 +53,14 @@ ul {
   }
   .bal{
     grid-area: b;
-    height: 800px;
-  }
-  aside{
   }
   article{
     grid-area: a;
-    max-width: 800px;
+    text-align: center;
   }
   article img{
     margin: auto;
-    height: 700px;
-    max-width: 900px;
+    max-width: 120%;
 }
   header{
     grid-area: h;
@@ -72,8 +70,25 @@ ul {
   }
   nav{
     grid-area: n;
+    max-width: 100px;
   }
   @media screen and (max-width: 720px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "h h"
+        "n n"
+        "b b"
+        "a a"
+        "j j"
+        "f f";
+    }
+    .jobb{
+      text-align: center;
+    }
+}
+  @media screen and (max-width: 520px) {
     main {
         display: grid;
         grid-template-columns: 1fr;
@@ -85,7 +100,10 @@ ul {
         "j"
         "f";
     }
-    article{
-
+    .bal{
+      text-align: center;
+    }
+    .jobb{
+      text-align: center;
     }
 }
