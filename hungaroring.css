@@ -1,11 +1,8 @@
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 body{
-    background-image: url("track.jpg");
-    background-repeat: no-repeat;
     width: 80%;
     margin: auto;
 
@@ -41,23 +38,32 @@ ul {
   .jobb{
     float: right;
     grid-area: j;
+    height: 200px;
   }
   main{
     display: grid;
-    grid-template-columns: 1fr 3fr 1.1fr;
+    grid-template-columns: 1fr 2fr 2fr;
     grid-template-areas: 
     " h h h "
-    " n n j"
+    " n a j"
     " b a j"
     " f f f";
   }
   .bal{
     grid-area: b;
-    padding-top: 0px;
+    height: 800px;
+  }
+  aside{
   }
   article{
     grid-area: a;
+    max-width: 800px;
   }
+  article img{
+    margin: auto;
+    height: 700px;
+    max-width: 900px;
+}
   header{
     grid-area: h;
   }
@@ -67,6 +73,19 @@ ul {
   nav{
     grid-area: n;
   }
-  aside{
-    height: 200px;
-  }
+  @media screen and (max-width: 720px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "h"
+        "n"
+        "b"
+        "a"
+        "j"
+        "f";
+    }
+    article{
+
+    }
+}
