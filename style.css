@@ -7,10 +7,31 @@
 body {
     max-width: 80%;
     margin: auto;
+    background-color: rgb(76, 76, 76);
 }
 
 header {
     background-image: url("kepek/headerhatter.webp");
-    height: 200px;
-    width: 80%;
+    padding: 5px;
+    color: white;
 }
+
+nav ul {
+    display: flex;
+    gap: 15px;
+    list-style-type: none;
+    background-color: black;
+    height: 30px;
+    padding: 5px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: rgb(236, 131, 149);
+}
+
