@@ -128,3 +128,15 @@ article .jobb {
  fieldset {
     padding: 10px;
  }
+
+ @media screen and (max-width: 720px) {
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+    }
+    
+ }
